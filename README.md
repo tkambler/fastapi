@@ -13,18 +13,30 @@ Install the `fastapi` command-line utility via `npm i -g fastapi`. Next, create 
 ``` javascript
 // config.js
 module.exports = {
-    '/api/v1/ping': {
-        'get': (req, res, next) => {
-            return res.send('pong');
+	// The port on which Express is to listen
+    'port': 7050,
+    // Whether or not to log incoming requests to the console (default: true)
+    'log': true,
+    'routes': {
+        '/api/v1/ping': {
+            'get': (req, res, next) => {
+                return res.send('pong');
+            }
         }
     }
 };
 ```
 
-Next, launch your server as shown below. Here we provide the `fastapi` utility with the path to our configuration file, along with a port on which it is to listen.
+Next, launch your server as shown below.
 
 ```
-$ fastapi -c ./config.js -p 7050 
+$ fastapi -c ./config.js
+```
+
+The port on which Express is to listen can be overridden by specifying it as an option on the command-line:
+
+```
+$ fastapi -c ./config.js -p 9050
 ```
 
 ## Related Resources
