@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Fastapi is a simple command-line utility for quickly creating an [Express](https://expressjs.com/)-based server based off of a single configuration file. It's useful for quickly spinning up mock APIs, among other things.
+Fastapi is a simple command-line utility that allows you to create an [Express](https://expressjs.com/)-based server based off of a single configuration file. It's useful for quickly spinning up mock APIs, among other things.
 
 ## Getting Started
 
