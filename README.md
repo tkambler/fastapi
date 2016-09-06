@@ -13,6 +13,8 @@ Install the `fastapi` command-line utility via `npm i -g fastapi`. Next, create 
 ``` javascript
 // config.js
 module.exports = {
+	// A unique ID for this API
+	'id': 'my-api',
 	// The port on which Express is to listen
     'port': 7050,
     // Whether or not to log incoming requests to the console (default: true)
@@ -33,10 +35,37 @@ Next, launch your server as shown below.
 $ fastapi -c ./config.js
 ```
 
-The port on which Express is to listen can be overridden by specifying it as an option on the command-line:
+## Defining Multiple APIs
+
+A configuration file can define multiple APIs by exporting an array of configuration objects, like we see here.
 
 ```
-$ fastapi -c ./config.js -p 9050
+module.exports = [
+    {
+        'id': 'api1',
+        'port': 7050,
+        'log': true,
+        'routes': {
+            '/api/v1/ping': {
+                'get': (req, res, next) => {
+                    return res.send('pong');
+                }
+            }
+        }
+    },
+    {
+        'id': 'api2',
+        'port': 7051,
+        'log': true,
+        'routes': {
+            '/api/v1/foo': {
+                'get': (req, res, next) => {
+                    return res.send('bar');
+                }
+            }
+        }
+    }
+];
 ```
 
 ## Related Resources

@@ -1,6 +1,6 @@
 {
   "name": "fastapi",
-  "version": "0.0.2",
+  "version": "0.0.6",
   "dependencies": {
     "accepts": {
       "version": "1.3.3",
@@ -16,6 +16,11 @@
       "version": "1.0.4",
       "from": "basic-auth@>=1.0.3 <1.1.0",
       "resolved": "https://registry.npmjs.org/basic-auth/-/basic-auth-1.0.4.tgz"
+    },
+    "bluebird": {
+      "version": "3.4.6",
+      "from": "bluebird@latest",
+      "resolved": "https://registry.npmjs.org/bluebird/-/bluebird-3.4.6.tgz"
     },
     "body-parser": {
       "version": "1.15.2",
