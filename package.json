@@ -1,6 +1,6 @@
 {
   "name": "fastapi",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple CLI utility for quickly creating Express-based servers with a single configuration file",
   "main": "index.js",
   "scripts": {
