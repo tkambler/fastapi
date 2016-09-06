@@ -7,6 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tim Ambler <tkambler@gmail.com> (http://bitcubby.com)",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/tkambler/fastapi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tkambler/fastapi/issues"
+  },
   "license": "ISC",
   "bin": {
     "express-this": "./lib/cli.js"
